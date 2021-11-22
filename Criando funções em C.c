@@ -8,39 +8,48 @@ void menu();
 void menu()
 {
     system("cls");
+    printf("\n0 - Finalizar");
     printf("\n1 - Somar");
     printf("\n2 - Subtrair");
+    printf("\nOpção escolhida: ");
+    
 }
 
 void somar()
 {
-    float n1, n2;
+    float numero1, numero2;
     fflush(stdin);
-    scanf("%f", &n1);
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &numero1);
     fflush(stdin);
-    scanf("%f", &n2);
-    printf("%f", n1 + n2);
+    printf("Digite o segundo valor: ");
+    scanf("%f", &numero2);
+    printf("Resultado: %.2f", numero1 + numero2);
 }
 void subtrair()
 {
-    float n1, n2;
+    float numero1, numero2;
     fflush(stdin);
-    scanf("%f", &n1);
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &numero1);
     fflush(stdin);
-    scanf("%f", &n2);
-    printf("%f", n1 - n2);
+    printf("Digite o segundo valor: ");
+    scanf("%f", &numero2);
+    printf("Resultado: %.2f", numero1 - numero2);
+    
 }
 
 main()
 {
-    int op;
+    int opcao;
 
-    while (op != 0)
+    while (opcao != 0)
     {
         menu();
-        scanf("%d", &op);
+        
+        scanf("%d", &opcao);
 
-        switch (op)
+        switch (opcao)
         {
         case 1:
             somar();
@@ -54,5 +63,3 @@ main()
         getch();
     }
 }
-
-/*Aqui vem minha lista de funções*/
